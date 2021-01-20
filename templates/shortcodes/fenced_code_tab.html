@@ -3,7 +3,6 @@
 
 {%- for codeblock in iter %}
 	{% set_global cpt = cpt + 1 %}
-	{# strip paragraph tags away for nicer markup #}
 	block no {{ cpt }}<br>
 	{{ codeblock | safe }}<br>
 {%- endfor %}
