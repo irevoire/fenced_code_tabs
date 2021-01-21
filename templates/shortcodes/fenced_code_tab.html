@@ -1,8 +1,0 @@
-{% set iter = body | split(pat="<hr />") %}
-{% set cpt = 0 %}
-
-{%- for codeblock in iter %}
-	{% set_global cpt = cpt + 1 %}
-	block no {{ cpt }}<br>
-	{{ codeblock | safe }}<br>
-{%- endfor %}
