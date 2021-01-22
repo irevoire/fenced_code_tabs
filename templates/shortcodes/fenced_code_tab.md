@@ -36,10 +36,6 @@ system.out.println("Hello World!");
 {{ throw(message="You must provide as much tabs name as there is code blocks") }}
 {% endif %}
 
-{% if nth == 1 %}
-<link rel="stylesheet" href="fenced_code_tab.css">
-{% endif %}
-
 <div class="md-fenced-code-tabs" id="tab-tab-group-{{ nth }}">
 
 {%- for i in range(end=tabs | length) -%}
@@ -51,6 +47,7 @@ system.out.println("Hello World!");
 	class="code-tab"
 	data-lang="{{ tabs[i] }}"
 	aria-controls="tab-group-{{ nth }}-{{ i }}_{{ tabs[i] }}-panel"
+	aria-hidden="true"
 	role="tab"
 >
 <label
