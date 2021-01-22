@@ -46,8 +46,8 @@ system.out.println("Hello World!");
 <input
 	name="tab-group-{{ nth }}"
 	type="radio"
-	id="tab-group-{{ nth }}-{{ i }}_{{ tabs[i] }}"
-	checked="checked"
+	id="tab-group-{{ nth }}-{{ i }}_{{ tabs[i] }}"{% if i == 0 %}
+	checked="checked"{% endif %}
 	class="code-tab"
 	data-lang="{{ tabs[i] }}"
 	aria-controls="tab-group-{{ nth }}-{{ i }}_{{ tabs[i] }}-panel"
